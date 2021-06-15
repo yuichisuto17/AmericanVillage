@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import"_header.scss";
+
+
+.top-page{
+    .top-visual{
+            text-align: center;
+        }
+    .top-text{
+        position: relative;
+        .text{
+            position: absolute;
+            right: 148px;
+            top: -218px;
+        }
+    }
+    p{
+        padding: {
+            top: 10px;
+            left: 165px;
+        };
+    }
+}
+
+@import"_footer.scss";

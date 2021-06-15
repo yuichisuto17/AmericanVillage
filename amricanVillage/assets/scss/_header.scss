@@ -1,0 +1,25 @@
+header{
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .header-left{
+        position: relative;
+        .maru{
+            position: absolute;
+            right: 1055px;
+            top: -40px;
+
+        }
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        li{
+            padding: {
+                right: 50px;
+            };
+        }
+    }
+}
