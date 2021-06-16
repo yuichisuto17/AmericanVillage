@@ -59,6 +59,43 @@ header ul li {
   padding-left: 165px;
 }
 
+.cardbox {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardbox > .col1 {
+  padding: 30px;
+  height: 50vh;
+  /* border: 1px black solid; */
+  position: relative;
+  overflow: visible;
+  width: 22%;
+  display: block;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.col1:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.col1 > input, .readmore {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
 /* PC用のCSSはメディアクエリの外に記述する */
 @media screen and (max-width: 768px) {
   /* 959px以下に適用されるCSS（タブレット用） */

@@ -27,6 +27,42 @@
     }
 }
 
+
+
+.cardbox{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.cardbox > .col1 {
+    padding: 30px;
+    height: 50vh;
+    /* border: 1px black solid; */
+    position: relative;
+    overflow: visible;
+    width: 22%;
+    display: block;
+    transition-duration: 0.5s;
+}
+
+
+.col1:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 0.5s;
+}
+
+.col1 > input, .readmore{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+
+
 /* PC用のCSSはメディアクエリの外に記述する */
 @media screen and (max-width: 768px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
