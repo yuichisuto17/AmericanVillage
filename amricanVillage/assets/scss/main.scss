@@ -5,10 +5,11 @@
 
 @import"_header.scss";
 
-
 .top-page{
+    
     .top-visual{
             text-align: center;
+            // @import"_slider.scss";
         }
     .top-text{
         position: relative;
@@ -24,6 +25,19 @@
             left: 165px;
         };
     }
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+@media screen and (max-width: 768px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+
+
+}
+@media screen and (max-width: 767px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+
+
 }
 
 @import"_footer.scss";
