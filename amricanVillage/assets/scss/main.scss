@@ -6,7 +6,6 @@
 @import"_header.scss";
 
 .top-page{
-    
     .top-visual{
             text-align: center;
             // @import"_slider.scss";
@@ -26,15 +25,22 @@
         };
     }
 }
-
-
-
+.latestarticles{
+    h2{
+        margin: {
+            top:50px;
+            bottom: 25px;
+        };
+    }
+}
 .cardbox{
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    padding: {
+        bottom: 30vh;
+    };
 }
 .cardbox > .col1 {
     padding: 30px;
@@ -46,13 +52,11 @@
     display: block;
     transition-duration: 0.5s;
 }
-
-
 .col1:hover{
     transform: scale(1.2,1.2);
     transition-duration: 0.5s;
+    box-shadow: 0 0 8px gray;
 }
-
 .col1 > input, .readmore{
     position: absolute;
     bottom: 20px;
@@ -71,7 +75,6 @@
 }
 @media screen and (max-width: 767px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-
 
 
 }

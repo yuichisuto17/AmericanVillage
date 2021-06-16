@@ -59,6 +59,11 @@ header ul li {
   padding-left: 165px;
 }
 
+.latestarticles h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
 .cardbox {
   width: 100vw;
   display: -webkit-box;
@@ -69,6 +74,7 @@ header ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 30vh;
 }
 
 .cardbox > .col1 {
@@ -88,6 +94,8 @@ header ul li {
           transform: scale(1.2, 1.2);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
 }
 
 .col1 > input, .readmore {
