@@ -8,6 +8,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<body <?php body_class();?>>
+<?php get_search_form(); ?>
     <header>
         <div class="header">
             <div class="header-left">
@@ -22,6 +24,16 @@
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/visual_1_pc.png" alt="visual" class="pc">
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/visual_1_sp.png" alt="visual" class="sp">
             
+            <a href="<?php echo esc_url(home_url('/'));?>"><?php bolginfo('name');?></a>
+            <img src="./assets/img/logo.png" alt="logo" class="maru" width="242px" height="242px">
+            </div>
+            <p class="header__descrition"><?php bloginfo( 'description' ); ?></p>
+            <ul>
+                <li><a href="#menu1"></a>Menu01</li>
+                <li><a href=""></a>Menu02</li>
+                <li><a href=""></a>Menu03</li>
+                <li><a href=""></a>Menu04</li>
+            </ul>
         </div>
         <div class="top-text">
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/visual_text_pc.png" alt="text" class="text">
