@@ -1,5 +1,5 @@
 header{
-    height: 18vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -9,7 +9,7 @@ header{
     ul{
         display: flex;
         list-style: none;
-        justify-content: space-around;
+        // justify-content: space-around;
         li{
             padding: {
                 right: 50px;

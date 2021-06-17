@@ -5,7 +5,7 @@
 }
 
 header {
-  height: 18vh;
+  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,8 +26,6 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 header ul li {
@@ -149,12 +147,15 @@ footer p {
   display: block !important;
 }
 
-.sp, .text_sp, ul, .intro_sp {
+.sp, .text_sp, .intro_sp {
   display: none !important;
 }
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
 @media only screen and (max-width: 767px) {
+  li {
+    display: none;
+  }
   .pc, .text {
     display: none !important;
   }

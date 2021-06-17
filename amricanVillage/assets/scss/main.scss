@@ -85,10 +85,14 @@
 
 /* パソコンで見たときは"pc"のclassがついた画像が表示される */
 .pc, .text, .intro_pc { display: block !important; }
-.sp, .text_sp, ul, .intro_sp { display: none !important; }
+.sp, .text_sp, .intro_sp { display: none !important; }
  
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
 @media only screen and (max-width: 767px) {
+
+    li{
+        display: none;
+    }
 
     .pc, .text {
         display: none !important;
