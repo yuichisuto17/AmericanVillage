@@ -52,13 +52,13 @@
     display: block;
     transition-duration: 0.5s;
 
-
-    a{
+    a{ // READ MOREの下の線
         display: inline-block;
         position: relative;
         color: #555;
         text-decoration: none;
 
+        // READ MOREの位置の操作
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -67,44 +67,31 @@
         content: "";
         position: absolute;
          left: 0;
-        bottom: -4px;
+        bottom: -10px; // 文字と線の幅
         width: 100%;
-        height: 3px;
+        height: 1px;
         background: #555;
-        transform: scale(0, 1);
-        transform-origin: left;
+        transform: scale(0.1, 1);
+        transform-origin: right; //右から伸びる
         transition: 0.4s;
     }
     a:hover:before {
         transform: scale(1);
     }
-
 }
+
 .col1:hover{
     transform: scale(1.2,1.2);
     transition-duration: 0.5s;
     box-shadow: 0 0 8px gray;
 }
-// .col1 > input, .readmore{
-//     position: absolute;
-//     bottom: 20px;
-//     right: 20px;
-// }
 
 
 
 
-
-/* PC用のCSSはメディアクエリの外に記述する */
-@media screen and (max-width: 768px) {
-	/* 959px以下に適用されるCSS（タブレット用） */
-
-
-}
+.desktopHidden { display:none;}
 @media screen and (max-width: 767px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-
-
+	
 }
 
 @import"_footer.scss";
