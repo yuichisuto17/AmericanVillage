@@ -59,18 +59,18 @@ header ul li {
   top: -218px;
 }
 
-.top-page p {
+.intro {
   padding-top: 10px;
   padding-left: 165px;
 }
 
 .latestarticles h2 {
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 .cardbox {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,14 +79,13 @@ header ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 30vh;
+  padding-bottom: 10%;
 }
 
 .cardbox > .col1 {
   margin: 30px;
   height: 50vh;
   width: 22.25vw;
-  /* border: 1px black solid; */
   position: relative;
 }
 
@@ -126,6 +125,25 @@ header ul li {
           box-shadow: 0 0 8px gray;
 }
 
+footer {
+  height: 18vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  color: white;
+}
+
 /* パソコンで見たときは"pc"のclassがついた画像が表示される */
 .pc, .text, .intro_pc {
   display: block !important;
@@ -145,6 +163,9 @@ header ul li {
   }
   header {
     height: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .header-left {
     display: -webkit-box;
@@ -156,16 +177,24 @@ header ul li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .top-visual {
     position: relative;
   }
   .text_sp {
     position: absolute;
-    bottom: 250px;
+    left: 5%;
+    bottom: 120px;
+    width: 70%;
   }
-  .top-page > .intro_sp {
-    font-size: 30px;
+  .intro {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    padding-left: 0px;
   }
   .h2 {
     text-align: center;
@@ -179,24 +208,17 @@ header ul li {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-footer {
-  height: 18vh;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer p {
-  color: white;
+  img {
+    width: 100%;
+  }
+  .cardbox > .col1 {
+    width: auto;
+  }
+  footer {
+    height: 10vh;
+  }
+  footer > p {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

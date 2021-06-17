@@ -19,40 +19,35 @@
             top: -218px;
         }
     }
-    p{
-        padding: {
-            top: 10px;
-            left: 165px;
-        };
-    }
+}
+.intro{
+    padding: {
+        top: 10px;
+        left: 165px;
+    };
 }
 .latestarticles{
     h2{
         margin: {
-            top:50px;
-            bottom: 25px;
+            top:5%;
+            bottom: 3%;
         };
     }
 }
 .cardbox{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: {
-        bottom: 30vh;
+        bottom: 10%;
     };
 }
 .cardbox > .col1 {
     margin: 30px;
     height: 50vh;
     width: 22.25vw;
-    /* border: 1px black solid; */
     position: relative;
-    // overflow: visible;
-    // width: 22%;
-    // display: block;
-    // transition-duration: 0.5s;
 
     a{ // READ MOREの下の線
         display: inline-block;
@@ -81,15 +76,12 @@
         transform: scale(1);
     }
 }
-
 .col1:hover{
-    // transform: scale(1.2,1.2);
-    // transition-duration: 0.5s;
     box-shadow: 0 0 8px gray;
 }
 
 
-
+@import"_footer.scss";
 
 /* パソコンで見たときは"pc"のclassがついた画像が表示される */
 .pc, .text, .intro_pc { display: block !important; }
@@ -104,8 +96,10 @@
     .sp, .text_sp {
          display: block !important;
     }
+
     header{
         height: 300px;
+        justify-content: center;
     }
     .header-left{
         display: flex;
@@ -113,31 +107,43 @@
     .maru {
         position: static;
         justify-content: center;
+        align-items: center;
     }
-
     .top-visual {
         position: relative;
     }
     .text_sp {
         position: absolute;
-        bottom:250px;
+        left: 5%;
+        bottom:120px;
+        width: 70%;
+    }
+    .intro{
+        font-size: 15px;
+        text-align: center;
+        padding: 10px;
+        padding-left: 0px;
     }
 
-    .top-page > .intro_sp{
-        font-size: 30px;
-    }
 
     .h2{
         text-align: center;
     }
-
     .cardbox{
         flex-direction: column;
         align-items: center;
     }
+    img{
+        width: 100%;
+    }
+    .cardbox > .col1{
+        width: auto;
+    }
 
+    footer{
+        height: 10vh;
+    }
+    footer > p {
+        font-size: 13px;
+    }
 }
-
-
-
-@import"_footer.scss";
