@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +21,6 @@ header .header-left {
   position: relative;
 }
 
-header .header-left .maru {
-  position: absolute;
-  right: 1055px;
-  top: -40px;
-}
-
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,8 +34,19 @@ header ul li {
   padding-right: 50px;
 }
 
+.maru {
+  position: absolute;
+  right: 1055px;
+  top: -40px;
+}
+
 .top-page .top-visual {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .top-page .top-text {
@@ -77,15 +83,11 @@ header ul li {
 }
 
 .cardbox > .col1 {
-  padding: 30px;
+  margin: 30px;
   height: 50vh;
+  width: 22.25vw;
   /* border: 1px black solid; */
   position: relative;
-  overflow: visible;
-  width: 22%;
-  display: block;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .cardbox > .col1 a {
@@ -120,16 +122,63 @@ header ul li {
 }
 
 .col1:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
   -webkit-box-shadow: 0 0 8px gray;
           box-shadow: 0 0 8px gray;
 }
 
-.desktopHidden {
-  display: none;
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc, .text, .intro_pc {
+  display: block !important;
+}
+
+.sp, .text_sp, ul, .intro_sp {
+  display: none !important;
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 767px) {
+  .pc, .text {
+    display: none !important;
+  }
+  .sp, .text_sp {
+    display: block !important;
+  }
+  header {
+    height: 300px;
+  }
+  .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .maru {
+    position: static;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .top-visual {
+    position: relative;
+  }
+  .text_sp {
+    position: absolute;
+    bottom: 250px;
+  }
+  .top-page > .intro_sp {
+    font-size: 30px;
+  }
+  .h2 {
+    text-align: center;
+  }
+  .cardbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer {

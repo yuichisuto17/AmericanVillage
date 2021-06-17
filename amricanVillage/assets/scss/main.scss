@@ -7,7 +7,8 @@
 
 .top-page{
     .top-visual{
-            text-align: center;
+            display: flex;
+            justify-content: center;
             // @import"_slider.scss";
         }
     .top-text{
@@ -43,14 +44,15 @@
     };
 }
 .cardbox > .col1 {
-    padding: 30px;
+    margin: 30px;
     height: 50vh;
+    width: 22.25vw;
     /* border: 1px black solid; */
     position: relative;
-    overflow: visible;
-    width: 22%;
-    display: block;
-    transition-duration: 0.5s;
+    // overflow: visible;
+    // width: 22%;
+    // display: block;
+    // transition-duration: 0.5s;
 
     a{ // READ MOREの下の線
         display: inline-block;
@@ -81,17 +83,61 @@
 }
 
 .col1:hover{
-    transform: scale(1.2,1.2);
-    transition-duration: 0.5s;
+    // transform: scale(1.2,1.2);
+    // transition-duration: 0.5s;
     box-shadow: 0 0 8px gray;
 }
 
 
 
 
-.desktopHidden { display:none;}
-@media screen and (max-width: 767px) {
-	
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc, .text, .intro_pc { display: block !important; }
+.sp, .text_sp, ul, .intro_sp { display: none !important; }
+ 
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 767px) {
+
+    .pc, .text {
+        display: none !important;
+    }
+    .sp, .text_sp {
+         display: block !important;
+    }
+    header{
+        height: 300px;
+    }
+    .header-left{
+        display: flex;
+    }
+    .maru {
+        position: static;
+        justify-content: center;
+    }
+
+    .top-visual {
+        position: relative;
+    }
+    .text_sp {
+        position: absolute;
+        bottom:250px;
+    }
+
+    .top-page > .intro_sp{
+        font-size: 30px;
+    }
+
+    .h2{
+        text-align: center;
+    }
+
+    .cardbox{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
+
+
 
 @import"_footer.scss";
