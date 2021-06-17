@@ -21,12 +21,6 @@ header .header-left {
   position: relative;
 }
 
-header .header-left .maru {
-  position: absolute;
-  right: 1055px;
-  top: -40px;
-}
-
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,8 +34,19 @@ header ul li {
   padding-right: 50px;
 }
 
+.maru {
+  position: absolute;
+  right: 1055px;
+  top: -40px;
+}
+
 .top-page .top-visual {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .top-page .top-text {
@@ -54,18 +59,18 @@ header ul li {
   top: -218px;
 }
 
-.top-page p {
+.intro {
   padding-top: 10px;
   padding-left: 165px;
 }
 
 .latestarticles h2 {
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 .cardbox {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,19 +79,14 @@ header ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 30vh;
+  padding-bottom: 10%;
 }
 
 .cardbox > .col1 {
-  padding: 30px;
+  margin: 30px;
   height: 50vh;
-  /* border: 1px black solid; */
+  width: 22.25vw;
   position: relative;
-  overflow: visible;
-  width: 22%;
-  display: block;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 .cardbox > .col1 a {
@@ -103,14 +103,14 @@ header ul li {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -10px;
   width: 100%;
-  height: 3px;
+  height: 1px;
   background: #555;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -121,21 +121,8 @@ header ul li {
 }
 
 .col1:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
   -webkit-box-shadow: 0 0 8px gray;
           box-shadow: 0 0 8px gray;
-}
-
-/* PC用のCSSはメディアクエリの外に記述する */
-@media screen and (max-width: 768px) {
-  /* 959px以下に適用されるCSS（タブレット用） */
-}
-
-@media screen and (max-width: 767px) {
-  /* 480px以下に適用されるCSS（スマホ用） */
 }
 
 footer {
@@ -155,5 +142,83 @@ footer {
 
 footer p {
   color: white;
+}
+
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc, .text, .intro_pc {
+  display: block !important;
+}
+
+.sp, .text_sp, ul, .intro_sp {
+  display: none !important;
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 767px) {
+  .pc, .text {
+    display: none !important;
+  }
+  .sp, .text_sp {
+    display: block !important;
+  }
+  header {
+    height: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .maru {
+    position: static;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-visual {
+    position: relative;
+  }
+  .text_sp {
+    position: absolute;
+    left: 5%;
+    bottom: 120px;
+    width: 70%;
+  }
+  .intro {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    padding-left: 0px;
+  }
+  .h2 {
+    text-align: center;
+  }
+  .cardbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  img {
+    width: 100%;
+  }
+  .cardbox > .col1 {
+    width: auto;
+  }
+  footer {
+    height: 10vh;
+  }
+  footer > p {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
