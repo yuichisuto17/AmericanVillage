@@ -19,6 +19,12 @@ header{
 }
 .maru{
     position: absolute;
+    z-index: 30;
     right: 1055px;
     top: -40px;
+}
+
+.n2-section-smartslider.fitvidsignore.n2_clear{
+    width: 1024px;
+    margin: 0 auto;
 }

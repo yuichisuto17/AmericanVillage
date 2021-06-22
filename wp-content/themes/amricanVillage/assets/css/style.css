@@ -34,8 +34,14 @@ header ul li {
 
 .maru {
   position: absolute;
+  z-index: 30;
   right: 1055px;
   top: -40px;
+}
+
+.n2-section-smartslider.fitvidsignore.n2_clear {
+  width: 1024px;
+  margin: 0 auto;
 }
 
 .top-page .top-visual {
@@ -192,7 +198,7 @@ footer p {
     width: 70%;
   }
   .intro {
-    font-size: 15px;
+    font-size: 30px;
     text-align: center;
     padding: 10px;
     padding-left: 0px;
